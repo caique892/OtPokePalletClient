@@ -1,0 +1,34 @@
+MainWindow
+  id: drop
+  !text: tr('Atenção')
+  focusable: true
+  size: 420 85
+  @onEscape: modules.game_interface.hideDropWindow()
+
+  Label
+    id: dropText
+    color: white
+    !text: tr('Você está jogando um pokemon ou uma bag no chão, tem certeza?')
+    text-align: center
+    anchors.top: parent.top
+    text-auto-resize: true
+    text-offset: 0 0
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: -11
+
+  Button
+    id: yesButton
+    !text: tr('Sim')
+    color: green
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    margin-right: 55
+
+  Button
+    id: noButton
+    !text: tr('Não')
+    color: red
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_interface.hideDropWindow()
+    margin-left: 55

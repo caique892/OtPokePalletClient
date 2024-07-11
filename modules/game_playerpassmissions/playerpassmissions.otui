@@ -1,0 +1,51 @@
+MainWindow
+  id: passWindow
+  image-source: images/window.png
+  size: 843 470
+  anchors.centerIn: parent
+
+  UIButton
+    id: background
+    size: 269 396
+    image-source: images/background_image.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 1
+    margin-top: -7
+
+  ScrollablePanel
+    id: monsters
+    size: 519 387
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 278
+    layout:
+      type: grid
+      cell-size: 135 136
+      cell-spacing: 7
+      flow: true
+    vertical-scrollbar: monstersScrollBar
+
+  GODzruVerticalScrollBar
+    id: monstersScrollBar
+    anchors.top: monsters.top
+    anchors.bottom: prev.bottom
+    anchors.right: parent.right
+    margin-top: 22
+    margin-bottom: 19
+    margin-right: 4
+    step: 78
+    pixels-scroll: true
+      $!on:
+        width: 0
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 20 21
+    image-source: images/close.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 403
+    margin-left: 756
+    @onClick: exibir()

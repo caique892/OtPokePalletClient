@@ -1,0 +1,9 @@
+Module
+  name: game_playerpass
+  description: Passe de Batalha para o Jogador.
+  author: Thalles Vitor
+  website: https://www.thallesdev.com
+  sandboxed: true
+  scripts: [ playerpass ]
+  @onLoad: init()
+  @onUnload: terminate()

@@ -1,0 +1,9 @@
+Module
+  name: game_playerpassmissions
+  description: Missoes do Passe de Batalha
+  author: Thalles Vitor
+  website: https://www.thallesdev.com
+  sandboxed: true
+  scripts: [ playerpassmissions ]
+  @onLoad: init()
+  @onUnload: terminate()

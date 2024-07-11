@@ -1,0 +1,219 @@
+MainWindow
+  id: passWindow
+  image-source: images/home/window.png
+  size: 843 470
+  anchors.centerIn: parent
+
+  UIButton
+    id: closeBtn
+    tooltip: Fechar
+    size: 20 21
+    image-source: images/home/close.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 403
+    margin-left: 756
+    @onClick: naoexibir()
+
+  UIButton
+    id: passRanking
+    size: 204 67
+    image-source: images/home/pass_basic
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 6
+    margin-left: 30
+
+  Label
+    id: passTime
+    text: 0
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 42
+    margin-left: 106
+
+  UIButton
+    id: level
+    text: 0
+    text-offset: -16 4
+    size: 59 47
+    image-source: images/home/level.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 85
+    margin-left: 28
+
+  UIButton
+    id: expBar
+    size: 207 13
+    image-source: images/home/progressbar.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 112
+    margin-left: 79
+
+  ProgressBar
+    id: exp
+    background-color: green
+    size: 202 11
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 113
+    margin-left: 82
+
+  UIButton
+    id: addLvl
+    size: 33 16
+    image-source: images/home/add_level.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 110
+    margin-left: 287
+    @onClick: buyPassLevel()
+
+  UIButton
+    id: background
+    size: 467 157
+    image-source: images/home/background.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.centerIn: parent
+    margin-left: 155
+    margin-top: -110
+
+  UIButton
+    id: missionsBtn
+    tooltip: Painel de Missoes
+    size: 104 30
+    image-source: images/home/missoes.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 146
+    margin-left: 27
+    opacity: 0.80
+    @onClick: modules.game_playerpassmissions.exibir()
+    $hover:
+      opacity: 100
+
+  UIButton
+    id: updatePassBtn
+    tooltip: Atualizar Passe
+    size: 104 30
+    image-source: images/home/atualizar_passe_off.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 146
+    margin-left: 135
+    opacity: 0.80
+    @onClick: buyPassElite()
+    $hover:
+      opacity: 100
+
+  UIButton
+    id: presentBtn
+    tooltip: Presente
+    size: 40 40
+    image-source: images/home/present.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 136
+    margin-left: 242
+    opacity: 0.80
+    @onClick: sendPresent()
+    $hover:
+      opacity: 100
+
+  UIButton
+    id: collectBtn
+    tooltip: Coletar
+    size: 44 43
+    image-source: images/home/collect.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 134
+    margin-left: 283
+    opacity: 0.80
+    visible: false
+    $hover:
+      opacity: 100
+
+  UIButton
+    id: list
+    size: 800 206
+    image-source: images/home/list_background.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 179
+    margin-left: 5
+
+  UIButton
+    id: passe1
+    size: 52 52
+    image-source: images/home/icons/basico.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 205
+    margin-left: 40
+
+  UIButton
+    id: passe1_text
+    size: 82 16
+    image-source: images/home/icons/text/passe_basico.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 262
+    margin-left: 30
+
+  UIButton
+    id: passe2
+    size: 52 52
+    image-source: images/home/icons/elite.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 295
+    margin-left: 40
+
+  UIButton
+    id: passe2_text
+    size: 82 16
+    image-source: images/home/icons/text/passe_elite.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 355
+    margin-left: 30
+
+  UIButton
+    id: separator
+    size: 5 103
+    image-source: images/home/separator.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 230
+    margin-left: 134
+
+  ScrollablePanel
+    id: list_items
+    size: 637 147
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 193
+    margin-left: 147
+    layout:
+      type: grid
+      cell-size: 54 69
+      cell-spacing: 7
+      flow: true
+    vertical-scrollbar: list_itemsScrollBar
+
+  GODzruHorizontalScrollBar
+    id: list_itemsScrollBar
+    anchors.bottom: list_items.bottom
+    anchors.left: list_items.left
+    anchors.right: list_items.right
+    margin-bottom: -20
+    margin-right: -6
+    step: 78
+    pixels-scroll: true
+      $!on:
+        width: 0

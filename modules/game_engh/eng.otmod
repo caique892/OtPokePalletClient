@@ -1,0 +1,9 @@
+Module
+  name: game_engh
+  description: Profids
+  author: Noninhouh
+  website: none
+  sandboxed: true
+  scripts: [ eng ]
+  @onLoad: init()
+  @onUnload: terminate()

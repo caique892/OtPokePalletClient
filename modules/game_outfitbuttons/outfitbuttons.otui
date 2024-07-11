@@ -1,0 +1,24 @@
+UIWindow
+  id: outfit_btnWindow
+  size: 110 49
+  anchors.centerIn: parent
+  background-color: #00000066
+  opacity: 77
+
+  UIButton
+    id: button_attack
+    size: 32 32
+    image-source: btn_attack.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 9
+    margin-left: 22
+
+  UIButton
+    id: button_buffs
+    size: 32 32
+    image-source: btn_buffs.png
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 9
+    margin-left: 60

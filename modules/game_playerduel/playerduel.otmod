@@ -1,0 +1,8 @@
+Module
+  name: game_playerduel
+  description: Duele a qualquer momento com os jogadores pelo mapa
+  author: Thalles Vitor
+  sandboxed: true
+  scripts: [ playerduel ]
+  @onLoad: init()
+  @onUnload: terminate()

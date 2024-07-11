@@ -1,0 +1,37 @@
+WindowButton < UIButton
+
+UIWidget
+  height: 700
+  draggable: true
+  anchors.right: parent.right
+  anchors.left: parent.left
+  anchors.top: topMenu.bottom
+  margin.top: 4
+  focusable: false
+  phantom: true
+
+  HeadlessWindow
+    id: playerWindow
+    size: 112 112
+    anchors.right: parent.right
+    anchors.top: topMenu.bottom
+    margin-right: 200
+    margin-top: 6
+    draggable: true
+    focusable: false
+
+    UIWidget
+      id: portrait
+      size: 81 81
+      anchors.centerIn: parent
+      phantom: true
+
+    UIWidget
+      id: clan
+      size: 32 32
+      image-source: /images/game/pokemon/clan/pokemon_trainer
+      anchors.right: parent.bottom
+      anchors.right: parent.left
+      margin-right: -22
+      margin-bottom: -12
+      phantom: true

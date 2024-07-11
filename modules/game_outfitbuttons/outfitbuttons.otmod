@@ -1,0 +1,9 @@
+Module
+  name: game_outfitbuttons
+  description: Ative o ataque automatico para a outfit que voce esta usando e visualize os buffs do botão
+  author: Thalles Vitor
+  website: www.thallesdev.com
+  sandboxed: true
+  scripts: [ outfitbuttons ]
+  @onLoad: init()
+  @onUnload: terminate()

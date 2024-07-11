@@ -1,0 +1,108 @@
+DuelButton < UIButton
+  font: verdana-11px-antialised
+  color: #93d8a6
+  size: 106 20
+  text-offset: 0 0
+  image-source: images/button
+  image-color: white
+  image-clip: 0 0 20 20
+  image-border: 4
+  padding: 5 10 5 10
+
+  $hover !disabled:
+    image-clip: 0 20 20 20
+
+  $pressed:
+    image-clip: 0 40 20 20
+    text-offset: 1 1
+
+  $disabled:
+    color: #808080
+
+MainWindow
+  id: duelWindow
+  text-align: top
+  text-offset: -108 4
+  text: Number of Pokeballs:
+  image-source: images/window
+  size: 252 102
+  anchors.centerIn: parent
+
+  UIButton
+    id: pokeball1
+    size: 32 32
+    image-source: images/pokeball_off
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -3
+    margin-left: -9
+    @onClick: selectPokeball(1)
+
+  UIButton
+    id: pokeball2
+    size: 32 32
+    image-source: images/pokeball_off
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -3
+    margin-left: 31
+    @onClick: selectPokeball(2)
+
+  UIButton
+    id: pokeball3
+    size: 32 32
+    image-source: images/pokeball_off
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -3
+    margin-left: 72
+    @onClick: selectPokeball(3)
+
+  UIButton
+    id: pokeball4
+    size: 32 32
+    image-source: images/pokeball_off
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -3
+    margin-left: 113
+    @onClick: selectPokeball(4)
+
+  UIButton
+    id: pokeball5
+    size: 32 32
+    image-source: images/pokeball_off
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -3
+    margin-left: 154
+    @onClick: selectPokeball(5)
+
+  UIButton
+    id: pokeball6
+    size: 32 32
+    image-source: images/pokeball_off
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -3
+    margin-left: 195
+    @onClick: selectPokeball(6)
+
+  DuelButton
+    id: ok
+    text: Ok
+    size: 65 21
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 45
+    margin-left: -9
+
+  DuelButton
+    id: cancelar
+    text: Cancelar
+    size: 65 21
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 45
+    margin-left: 165
+    

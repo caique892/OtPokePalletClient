@@ -1,0 +1,9 @@
+Module
+  name: game_sound
+  description: Sistema de Som para o seu Jogo
+  author: Thalles Vitor
+  website: www.thallesdev.store
+  sandboxed: true
+  scripts: [ sound ]
+  @onLoad: init()
+  @onUnload: terminate()

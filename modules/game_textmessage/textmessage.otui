@@ -1,0 +1,52 @@
+TextMessageLabel < UILabel
+  font: verdana-11px-rounded
+  opacity: 0
+  text-align: center
+  text-wrap: true
+  text-auto-resize: true
+  margin-bottom: 2
+
+Panel
+  anchors.fill: gameMapPanel
+  focusable: false
+
+  Panel
+    id: centerTextMessagePanel
+    layout:
+      type: verticalBox
+      fit-children: true
+    width: 360
+    anchors.centerIn: parent
+
+    TextMessageLabel
+      id: highCenterLabel
+    TextMessageLabel
+      id: middleCenterLabel
+    TextMessageLabel
+      id: lowCenterLabel
+
+  TextMessageLabel
+    id: privateLabel
+    anchors.top: parent.top
+    anchors.bottom: centerTextMessagePanel.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    text-auto-resize: false
+    width: 275
+
+  TextMessageLabel
+    id: statusLabel
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 50
+
+  TextMessageLabel
+    id: gamemasterBroadcast
+    height: 50
+    color: #55ff55
+    background-color: #ffffff55
+    text-auto-resize: false
+    anchors.verticalCenter: parent.verticalCenter
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 100
